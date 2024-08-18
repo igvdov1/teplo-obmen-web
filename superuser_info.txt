@@ -1,0 +1,16 @@
+login: teploobm
+password 7254#log
+
+
+
+Gmail data:
+login: teplo1288@gmail.com
+password: PvmKCpZm
+
+
+1:12:29
+
+
+colors:
+ blue: #3131f0,
+ #2b05df

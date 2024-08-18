@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Фотоальбом</title>
+</head>
+<body>
+    <h1>Года</h1>
+    <ul>
+        {% for year in years %}
+            <li><a href="{% url 'product_cards_by_year' year.id %}">{{ year.year }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}

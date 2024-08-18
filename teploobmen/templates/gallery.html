@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Галлерея</h1>
+
+<div class="row">
+    {% for teploobmennik in teploobmennik %}
+        <div class = "col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ teploobmennik.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ teploobmennik.name }}</h5>
+              <p class="card-text">{{ teploobmennik.price }}</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+    
+    {% endfor %}
+{% endblock %}

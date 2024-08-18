@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<!-- <head>
+    <title>Продукция за {{ year.year }}</title>
+</head> -->
+<body>
+    <h1>Продукция за {{ year.year }}</h1>
+    <a href="{% url 'year_list' %}">Назад к годам</a>
+    <div>
+        {% for product_card in product_cards %}
+            <div>
+                <img src="{{ product_card.image.url }}" alt="{{ product_card.title }}">
+                <p>{{ product_card.title }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

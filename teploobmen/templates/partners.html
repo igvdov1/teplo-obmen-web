@@ -1,0 +1,106 @@
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Партнеры</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #003366;
+            text-align: center;
+        }
+        /* Вариант 1: Сетка логотипов */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .partner-logo {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        /* Вариант 2: Карусель с логотипами */
+        .partners-carousel {
+            width: 100%;
+            overflow: hidden;
+        }
+        .partner-logos {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+        .partner-logo-carousel {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        /* Вариант 3: Горизонтальный список логотипов */
+        .partners-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .partner-item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .partner-logo-list {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Наши партнеры</h2>
+        
+        <!-- Вариант 1: Сетка логотипов -->
+        <div class="partners-grid">
+            <img class="partner-logo" src="{% static 'images/teploobmen_transformed/2023/1.jpg' %} alt="Партнер 1">
+            <img class="partner-logo" src="{% static 'images/teploobmen_transformed/2023/1.jpg' %} alt="Партнер 2">
+            <img class="partner-logo" src="{% static 'images/teploobmen_transformed/2023/1.jpg' %} alt="Партнер 3">
+            <!-- Добавьте больше логотипов партнеров по мере необходимости -->
+        </div>
+
+        <!-- Вариант 2: Карусель с логотипами -->
+        <div class="partners-carousel">
+            <div class="partner-logos">
+                <img class="partner-logo-carousel" src="partner1.jpg" alt="Партнер 1">
+                <img class="partner-logo-carousel" src="partner2.jpg" alt="Партнер 2">
+                <img class="partner-logo-carousel" src="partner3.jpg" alt="Партнер 3">
+                <!-- Добавьте больше логотипов партнеров по мере необходимости -->
+            </div>
+        </div>
+
+        <!-- Вариант 3: Горизонтальный список логотипов -->
+        <ul class="partners-list">
+            <li class="partner-item"><img class="partner-logo-list" src="partner1.jpg" alt="Партнер 1"></li>
+            <li class="partner-item"><img class="partner-logo-list" src="partner2.jpg" alt="Партнер 2"></li>
+            <li class="partner-item"><img class="partner-logo-list" src="partner3.jpg" alt="Партнер 3"></li>
+            <!-- Добавьте больше логотипов партнеров по мере необходимости -->
+        </ul>
+    </div>
+</body>
+</html>
+{% endblock %}
